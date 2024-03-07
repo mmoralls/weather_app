@@ -39,7 +39,7 @@ jobs:
         pytest
     
     - name: schedule 
-       - cron:"0 8 * * Sun-Sat" #runs everyday at 8am Sat-Sun
+       - cron:"0 8 * * SUN-SAT" #runs everyday at 8am Sat-Sun
       run: |
         python app.py
     
