@@ -1,14 +1,11 @@
 # import packages
 
 from data import extract_data
-import smtplib, os, schedule, ssl
-import streamlit as st
+import smtplib, os, ssl
 from dotenv import load_dotenv
 _ = load_dotenv()
 
 extract_data()
-
-st.text("This app collects data from a local weather station and sends it in an email.")
 
 def send_mail():
     email_address = os.environ.get("gmail_username")
@@ -30,9 +27,3 @@ def send_mail():
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, file_content)
         server.quit()
-
-#schedule.every(1).day.at("12:00").do(send_mail)
-schedule.every(1).minutes.do(send_mail)
-
-while True:
-    schedule.run_pending()
