@@ -37,12 +37,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-        
-on: 
-  schedule: 
-    - cron: "0 8 * * Sun-Sat" #runs everyday at 8am Sat - Sun
     
-    - name: execute py script # run file
+    - name: schedule 
+       - cron:"0 8 * * Sun-Sat" #runs everyday at 8am Sat-Sun
       run: |
         python app.py
     
