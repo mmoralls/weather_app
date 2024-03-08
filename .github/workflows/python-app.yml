@@ -5,12 +5,15 @@ name: Python application
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "my_app" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "my_app" ]
 
 permissions:
   contents: read
+
+run-name: schedule 
+  - cron:"0 8 * * SUN-SAT" #runs everyday at 8am Sat-Sun
 
 jobs:
   build:
@@ -38,8 +41,7 @@ jobs:
       run: |
         pytest
     
-    - name: schedule 
-       - cron:"0 8 * * SUN-SAT" #runs everyday at 8am Sat-Sun
+    - name: weather app
       run: |
-        python app.py
+        python3 app.py
     
