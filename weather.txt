@@ -1,0 +1,8 @@
+This is a weather report for North Raleigh: 
+
+Date of forecast: Apr 22, 2023
+Time of Day: This Afternoon 
+Temperature: 70 
+Relative Humidity: 85 
+Short Forecast: Showers And Thunderstorms 
+Detailed Forecast: Showers and thunderstorms. Some of the storms could be severe. Mostly cloudy, with a high near 70. Southwest wind 12 to 15 mph, with gusts as high as 23 mph. Chance of precipitation is 90%. New rainfall amounts between three quarters and one inch possible.
