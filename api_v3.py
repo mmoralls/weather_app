@@ -13,11 +13,10 @@ def extract_data():
         utc_date = iso_date.strftime('%b %d, %Y')
         time_of_day = data['properties']['periods'][0]['name']
         temp = data['properties']['periods'][0]['temperature']
-        rel_humidity = data['properties']['periods'][0]['relativeHumidity']['value']
         sf = data['properties']['periods'][0]['shortForecast']
         df = data['properties']['periods'][0]['detailedForecast']
         weather_report = (
-            f"This is a weather report for North Raleigh: \n\nDate of forecast: {utc_date}\nTime of Day: {time_of_day} \nTemperature: {temp} \nRelative Humidity: {rel_humidity} \nShort Forecast: {sf} \nDetailed Forecast: {df}")
+            f"This is a weather report for North Raleigh: \n\nDate of forecast: {utc_date}\nTime of Day: {time_of_day} \nTemperature: {temp} \nShort Forecast: {sf} \nDetailed Forecast: {df}")
 
     with open("weather.txt", "w") as outfile:
         outfile.write(weather_report)
