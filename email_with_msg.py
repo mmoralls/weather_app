@@ -16,7 +16,7 @@ def send_mail():
     smtp_server = "smtp.gmail.com"
     sender_email = email_address
     # Enter receiver address
-    receiver_email = "mmoralls0@gmail.com", "jeraldinemoralls@gmail.com"
+    receiver_email = "mmoralls0@gmail.com"
     password = email_password
 
     msg = open('weather.txt', 'r').read()
