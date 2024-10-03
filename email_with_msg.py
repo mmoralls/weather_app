@@ -3,7 +3,6 @@
 import smtplib
 import ssl
 import os
-#from email.message import EmailMessage
 from dotenv import load_dotenv
 _ = load_dotenv()
 
@@ -16,8 +15,8 @@ def send_mail():
     smtp_server = "smtp.gmail.com"
     sender_email = email_address
     # Enter receiver address
-    #receiver_email = "mmoralls0@gmail.com"
-    #password = email_password
+    receiver_email = "mmoralls0@gmail.com"
+    password = email_password
 
     msg = open('weather.txt', 'r').read()
 
